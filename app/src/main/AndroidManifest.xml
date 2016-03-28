@@ -27,6 +27,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="me.cpjk.firstapp.MainActivity" />
         </activity>
+        <activity
+            android:name=".CustomerCreateOrderActivity"
+            android:label="@string/title_activity_customer_create_order"
+            android:parentActivityName=".CustomerActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.firstapp.CustomerActivity" />
+        </activity>
     </application>
 
 </manifest>

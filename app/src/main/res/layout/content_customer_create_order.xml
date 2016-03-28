@@ -9,8 +9,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="me.cpjk.firstapp.CustomerActivity"
-    tools:showIn="@layout/activity_customer">
+    tools:context="me.cpjk.firstapp.CustomerOrderActivity"
+    tools:showIn="@layout/activity_customer_create_order">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,16 +18,5 @@
         android:layout_height="match_parent"
         android:weightSum="1">
 
-        <Button
-            android:layout_width="209dp"
-            android:layout_height="wrap_content"
-            android:text="Create Order"
-            android:id="@+id/customerCreateOrderButton"
-            android:layout_marginTop="37dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="0.05"
-            android:onClick="openCustomerCreateOrderActivity" />
     </LinearLayout>
-
 </RelativeLayout>

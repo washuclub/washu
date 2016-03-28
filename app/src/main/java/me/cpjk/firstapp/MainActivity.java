@@ -20,16 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button myButton = (Button) findViewById(R.id.customerButton);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        Button customerButton = (Button) findViewById(R.id.customerButton);
     }
 
     public void openCustomerActivity(View view) {
@@ -37,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.this.startActivity(startCustomerActivityIntent);
     }
 
-    // need to add method to open customer activity, and tie it to onClick from the customer button
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
