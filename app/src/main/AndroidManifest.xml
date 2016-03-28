@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.cpjk.firstapp">
+    package="me.cpjk.washu">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="me.cpjk.washu.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,22 +19,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CustomerActivity"
+            android:name="me.cpjk.washu.CustomerActivity"
             android:label="@string/title_activity_customer"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="me.cpjk.washu.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="me.cpjk.firstapp.MainActivity" />
+                android:value="me.cpjk.washu.MainActivity" />
         </activity>
         <activity
-            android:name=".CustomerCreateOrderActivity"
+            android:name="me.cpjk.washu.CustomerCreateOrderActivity"
             android:label="@string/title_activity_customer_create_order"
-            android:parentActivityName=".CustomerActivity"
+            android:parentActivityName="me.cpjk.washu.CustomerActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="me.cpjk.firstapp.CustomerActivity" />
+                android:value="me.cpjk.washu.CustomerActivity" />
         </activity>
     </application>
 

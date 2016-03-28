@@ -1,4 +1,4 @@
-package me.cpjk.firstapp;
+package me.cpjk.washu;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

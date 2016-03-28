@@ -1,4 +1,4 @@
-package me.cpjk.firstapp;
+package me.cpjk.washu;
 
 import org.junit.Test;
 

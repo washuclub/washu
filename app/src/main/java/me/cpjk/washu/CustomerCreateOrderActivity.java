@@ -1,4 +1,4 @@
-package me.cpjk.firstapp;
+package me.cpjk.washu;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
