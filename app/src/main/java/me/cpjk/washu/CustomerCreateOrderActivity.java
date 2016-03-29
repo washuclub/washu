@@ -2,6 +2,7 @@ package me.cpjk.washu;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -47,7 +49,18 @@ public class CustomerCreateOrderActivity extends AppCompatActivity {
                 Toast.makeText(this, "Image captured.", Toast.LENGTH_LONG).show();
 
                 ImageView carImageView = (ImageView) findViewById(R.id.carImageUpload);
-                carImageView.setImageURI(imageFileUri); // set the thumbnail image
+
+                // scale down the image for thumbnail display
+                try {
+                    Bitmap carImageBitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageFileUri);
+                    Bitmap scaledcarImageBitmap = Bitmap.createScaledBitmap(carImageBitmap, 512, 512, true);
+
+                    carImageView.setImageBitmap(scaledcarImageBitmap);
+                }
+                catch (Exception e) {
+                    Toast.makeText(this, "Could not find image file for display", Toast.LENGTH_LONG).show();
+                    return;
+                }
             }
             else if (resultCode == RESULT_CANCELED) {
                 Toast.makeText(this, "Image capture cancelled.", Toast.LENGTH_LONG).show();
