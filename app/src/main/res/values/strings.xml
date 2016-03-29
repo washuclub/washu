@@ -4,4 +4,5 @@
     <string name="title_activity_customer">Customer</string>
     <string name="title_activity_customer_create_order">Create Order</string>
     <string name="title_activity_select_wash_type">SelectWashType</string>
+    <string name="title_activity_payment">PaymentActivity</string>
 </resources>

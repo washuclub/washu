@@ -45,6 +45,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="me.cpjk.washu.CustomerCreateOrderActivity" />
         </activity>
+        <activity
+            android:name=".PaymentActivity"
+            android:label="@string/title_activity_payment"
+            android:parentActivityName=".CustomerCreateOrderActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.CustomerCreateOrderActivity" />
+        </activity>
+        <activity android:name=".OrderCompleteActivity">
+            android:name=".OrderCompleteActivity"
+            android:label="@string/title_activity_order_complete"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

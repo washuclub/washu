@@ -26,6 +26,7 @@
             android:text="Customer"
             android:id="@+id/customerButton"
             android:layout_weight="0.04"
-            android:onClick="openCustomerActivity" />
+            android:onClick="openCustomerActivity"
+            android:nestedScrollingEnabled="false" />
     </LinearLayout>
 </RelativeLayout>
