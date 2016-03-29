@@ -1,6 +1,7 @@
 package me.cpjk.washu;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -9,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,13 +41,19 @@ public class CustomerCreateOrderActivity extends AppCompatActivity {
             this.washType = data.getStringExtra("washType");
             TextView washTypeTextView = (TextView) findViewById(R.id.washTypeText);
             washTypeTextView.setText(this.washType);
-        } else if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) { // camera
+        }
+        else if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) { // camera
             if (resultCode == RESULT_OK) {
                 Toast.makeText(this, "Image captured.", Toast.LENGTH_LONG).show();
-            } else if (resultCode == RESULT_CANCELED) {
+
+                ImageView carImageView = (ImageView) findViewById(R.id.carImageUpload);
+                carImageView.setImageURI(imageFileUri); // set the thumbnail image
+            }
+            else if (resultCode == RESULT_CANCELED) {
                 Toast.makeText(this, "Image capture cancelled.", Toast.LENGTH_LONG).show();
 
-            } else {
+            }
+            else {
                 Toast.makeText(this, "Image capture error.", Toast.LENGTH_LONG).show();
             }
         }
@@ -75,6 +83,9 @@ public class CustomerCreateOrderActivity extends AppCompatActivity {
     private static File getOutputMediaFile(int type){
         // To be safe, you should check that the SDCard is mounted
         // using Environment.getExternalStorageState() before doing this.
+        String state = Environment.getExternalStorageState();
+        if (! Environment.MEDIA_MOUNTED.equals(state)) return null;
+
 
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES), "Washu");
