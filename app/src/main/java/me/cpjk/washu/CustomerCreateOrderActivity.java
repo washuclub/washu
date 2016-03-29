@@ -112,5 +112,9 @@ public class CustomerCreateOrderActivity extends AppCompatActivity {
 
         return mediaFile;
     }
+    public void openPaymentActivity(View view) {
+        Intent startPaymentActivityIntent = new Intent(CustomerCreateOrderActivity.this, PaymentActivity.class);
+        CustomerCreateOrderActivity.this.startActivity(startPaymentActivityIntent);
+    }
 
 }
