@@ -21,14 +21,17 @@ public class CustomerCreateOrderActivity extends AppCompatActivity {
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        this.washType = data.getStringExtra("washType");
-        TextView washTypeTextView = (TextView) findViewById(R.id.washTypeText);
-        washTypeTextView.setText(this.washType);
+        if (requestCode == 1) { // wash type
+            this.washType = data.getStringExtra("washType");
+            TextView washTypeTextView = (TextView) findViewById(R.id.washTypeText);
+            washTypeTextView.setText(this.washType);
+        }
     }
 
     public void startSelectWashTypeActivity(View view) {
         Intent startSelectWashTypeIntent = new Intent(CustomerCreateOrderActivity.this, SelectWashTypeActivity.class);
         CustomerCreateOrderActivity.this.startActivityForResult(startSelectWashTypeIntent, 1);
     }
+
 
 }

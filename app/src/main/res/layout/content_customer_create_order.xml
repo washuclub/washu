@@ -21,7 +21,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="91dp">
 
             <Button
                 style="?android:attr/buttonStyleSmall"
@@ -39,6 +39,28 @@
                 android:text="Wash type"
                 android:id="@+id/washTypeText"
                 android:layout_marginTop="20px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="License plate"
+                android:id="@+id/textView"
+                android:layout_weight="0.11" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:layout_weight="0.65"
+                android:text="plate number" />
         </LinearLayout>
 
     </LinearLayout>
