@@ -18,5 +18,29 @@
         android:layout_height="match_parent"
         android:weightSum="1">
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Wash Type"
+                android:id="@+id/button"
+                android:layout_gravity="center_horizontal"
+                android:onClick="startSelectWashTypeActivity" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Wash type"
+                android:id="@+id/washTypeText"
+                android:layout_marginTop="20px" />
+        </LinearLayout>
+
     </LinearLayout>
+
 </RelativeLayout>

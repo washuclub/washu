@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SelectWashTypeActivity"
+    tools:showIn="@layout/activity_select_wash_type">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+            android:layout_weight="0.11"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="82dp"
+                android:text="Platinum Plus"
+                android:id="@+id/PlatinumPlusWashTypeButton"
+                android:onClick="selectPlatinumPlusWashType" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="62dp"
+                android:text="Our premium wash type. Wax and tire scrub"
+                android:id="@+id/platinumPlusWashText"
+                android:layout_weight="0.87" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+            android:weightSum="1"
+            android:layout_weight="0.10">
+
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="82dp"
+                android:text="Platinum"
+                android:id="@+id/PlatinumWashTypeButton"
+                android:onClick="selectPlatinumWashType" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:text="Our most popular wash type. Tire scrub"
+                android:id="@+id/platinumWashText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="165dp"
+                android:layout_height="82dp"
+                android:text="Super"
+                android:id="@+id/SuperWashTypeButton"
+                android:onClick="selectSuperWashType" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:text="Our basic wash type."
+                android:id="@+id/superWashText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="me.cpjk.washu.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,22 +19,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="me.cpjk.washu.CustomerActivity"
+            android:name=".CustomerActivity"
             android:label="@string/title_activity_customer"
-            android:parentActivityName="me.cpjk.washu.MainActivity"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="me.cpjk.washu.MainActivity" />
         </activity>
         <activity
-            android:name="me.cpjk.washu.CustomerCreateOrderActivity"
+            android:name=".CustomerCreateOrderActivity"
             android:label="@string/title_activity_customer_create_order"
-            android:parentActivityName="me.cpjk.washu.CustomerActivity"
+            android:parentActivityName=".CustomerActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="me.cpjk.washu.CustomerActivity" />
+        </activity>
+        <activity
+            android:name=".SelectWashTypeActivity"
+            android:label="@string/title_activity_select_wash_type"
+            android:parentActivityName=".CustomerCreateOrderActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.CustomerCreateOrderActivity" />
         </activity>
     </application>
 
