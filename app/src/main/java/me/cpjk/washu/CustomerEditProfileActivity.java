@@ -17,7 +17,6 @@ import me.cpjk.washu.R;
 public class CustomerEditProfileActivity extends AppCompatActivity {
     private String name;
     private String age;
-    private String ccNumber;
     private String licensePlateNumber;
 
     @Override
@@ -30,17 +29,14 @@ public class CustomerEditProfileActivity extends AppCompatActivity {
         SharedPreferences sharedPrefs = this.getSharedPreferences(getString(R.string.profile_file_name), Context.MODE_PRIVATE);
         name = sharedPrefs.getString(this.getString(R.string.user_profile_name), "");
         age = sharedPrefs.getString(this.getString(R.string.user_profile_age), "");
-        ccNumber = sharedPrefs.getString(this.getString(R.string.user_profile_cc), "");
         licensePlateNumber = sharedPrefs.getString(this.getString(R.string.user_profile_license), "");
 
         EditText nameField = (EditText) findViewById(R.id.profileNameInput);
         EditText ageField = (EditText) findViewById(R.id.profileAgeInput);
-        EditText ccField = (EditText) findViewById(R.id.profileCreditCardInput);
         EditText licenseField = (EditText) findViewById(R.id.profileLicensePlateInput);
 
         nameField.setText(name);
         ageField.setText(age);
-        ccField.setText(ccNumber);
         licenseField.setText(licensePlateNumber);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -52,17 +48,14 @@ public class CustomerEditProfileActivity extends AppCompatActivity {
 
         EditText nameField = (EditText) findViewById(R.id.profileNameInput);
         EditText ageField = (EditText) findViewById(R.id.profileAgeInput);
-        EditText ccField = (EditText) findViewById(R.id.profileCreditCardInput);
         EditText licenseField = (EditText) findViewById(R.id.profileLicensePlateInput);
 
         name = nameField.getText().toString();
         age = ageField.getText().toString();
-        ccNumber = ccField.getText().toString();
         licensePlateNumber = licenseField.getText().toString();
 
         editor.putString(this.getString(R.string.user_profile_name), name);
         editor.putString(this.getString(R.string.user_profile_age), age);
-        editor.putString(this.getString(R.string.user_profile_cc), ccNumber);
         editor.putString(this.getString(R.string.user_profile_license), licensePlateNumber);
         editor.commit();
 

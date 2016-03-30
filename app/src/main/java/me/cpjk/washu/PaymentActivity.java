@@ -12,6 +12,8 @@ import android.widget.EditText;
 
 public class PaymentActivity extends AppCompatActivity {
 
+    private final boolean AUTOFILL = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +23,14 @@ public class PaymentActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        SharedPreferences sharedPrefs = this.getSharedPreferences(getString(R.string.profile_file_name), Context.MODE_PRIVATE);
-        String ccNumber = sharedPrefs.getString(this.getString(R.string.user_profile_cc), "");
+        if (AUTOFILL) {
+            SharedPreferences sharedPrefs = this.getSharedPreferences(getString(R.string.profile_file_name), Context.MODE_PRIVATE);
+            String ccNumber = sharedPrefs.getString(this.getString(R.string.user_profile_cc), "");
 
-        EditText licensePlateEditText = (EditText) findViewById(R.id.paymentCCNumberEditText);
-        licensePlateEditText.setText(ccNumber);
+            EditText licensePlateEditText = (EditText) findViewById(R.id.paymentCCNumberEditText);
+            licensePlateEditText.setText(ccNumber);
+        }
+
         Button orderButton = (Button) findViewById(R.id.orderButton);
     }
 

@@ -119,37 +119,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="129dp">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPostalAddress"
-                    android:ems="10"
-                    android:id="@+id/profileCreditCardInput" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Credit Card Number"
-                    android:id="@+id/profileCreditCardTextView" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="82dp"
