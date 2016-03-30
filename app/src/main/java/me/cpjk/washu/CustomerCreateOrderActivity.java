@@ -88,6 +88,13 @@ public class CustomerCreateOrderActivity extends AppCompatActivity {
 
     public void openPaymentActivity(View view) {
         Intent startPaymentActivityIntent = new Intent(CustomerCreateOrderActivity.this, PaymentActivity.class);
+
+        EditText licenseField = (EditText) findViewById(R.id.orderLicensePlateEditText);
+
+        startPaymentActivityIntent.putExtra("washType", washType);
+        startPaymentActivityIntent.putExtra("licensePlate", licenseField.getText().toString());
+        startPaymentActivityIntent.putExtra("imageFileUri", imageFileUri.toString());
+
         CustomerCreateOrderActivity.this.startActivity(startPaymentActivityIntent);
     }
 

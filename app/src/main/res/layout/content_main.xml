@@ -21,7 +21,7 @@
         android:weightSum="1">
 
         <Button
-            android:layout_width="260dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Customer"
             android:id="@+id/customerButton"
@@ -29,5 +29,15 @@
             android:onClick="openCustomerActivity"
             android:nestedScrollingEnabled="false"
             android:layout_marginLeft="47dp" />
+            android:nestedScrollingEnabled="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Washer"
+            android:id="@+id/washerButton"
+            android:layout_weight="0.04"
+            android:onClick="openWasherActivity"
+            android:nestedScrollingEnabled="true" />
     </LinearLayout>
 </RelativeLayout>

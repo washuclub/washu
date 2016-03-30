@@ -77,6 +77,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="me.cpjk.washu.CustomerActivity" />
         </activity>
+        <activity
+            android:name=".WasherActivity"
+            android:label="@string/title_activity_washer"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PendingOrdersActivity"
+            android:label="@string/title_activity_pending_orders"
+            android:parentActivityName=".WasherActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.cpjk.washu.WasherActivity" />
+        </activity>
     </application>
 
 </manifest>

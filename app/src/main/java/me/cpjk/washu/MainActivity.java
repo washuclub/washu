@@ -26,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.this.startActivity(startCustomerActivityIntent);
     }
 
+    public void openWasherActivity(View view) {
+        Intent startWasherActivityIntent = new Intent(MainActivity.this, WasherActivity.class);
+        MainActivity.this.startActivity(startWasherActivityIntent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

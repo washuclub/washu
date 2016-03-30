@@ -11,4 +11,6 @@
     <string name="user_profile_age">age</string>
     <string name="user_profile_license">license</string>
     <string name="user_profile_cc">cc_number</string>
+    <string name="title_activity_washer">Washer</string>
+    <string name="title_activity_pending_orders">Pending Orders</string>
 </resources>

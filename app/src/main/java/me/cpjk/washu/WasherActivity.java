@@ -1,0 +1,30 @@
+package me.cpjk.washu;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+
+import me.cpjk.washu.R;
+
+public class WasherActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_washer);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    public void openPendingOrdersActivity(View view) {
+        Intent openPendingOrdersActivity = new Intent(WasherActivity.this, PendingOrdersActivity.class);
+        WasherActivity.this.startActivity(openPendingOrdersActivity);
+    }
+
+}
