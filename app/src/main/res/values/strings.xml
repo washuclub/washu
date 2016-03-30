@@ -5,4 +5,10 @@
     <string name="title_activity_customer_create_order">Create Order</string>
     <string name="title_activity_select_wash_type">SelectWashType</string>
     <string name="title_activity_payment">Payment</string>
+    <string name="title_activity_customer_edit_profile">CustomerEditProfileActivity</string>
+    <string name="profile_file_name">user_profile</string>
+    <string name="user_profile_name">name</string>
+    <string name="user_profile_age">age</string>
+    <string name="user_profile_license">license</string>
+    <string name="user_profile_cc">cc_number</string>
 </resources>

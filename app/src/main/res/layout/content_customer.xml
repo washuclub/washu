@@ -18,16 +18,37 @@
         android:layout_height="match_parent"
         android:weightSum="1">
 
-        <Button
-            android:layout_width="209dp"
-            android:layout_height="wrap_content"
-            android:text="Create Order"
-            android:id="@+id/customerCreateOrderButton"
-            android:layout_marginTop="37dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="0.05"
-            android:onClick="openCustomerCreateOrderActivity" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+
+            <Button
+                android:layout_width="209dp"
+                android:layout_height="70dp"
+                android:text="Create Order"
+                android:id="@+id/customerCreateOrderButton"
+                android:layout_marginTop="37dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="0.01"
+                android:onClick="openCustomerCreateOrderActivity" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="131dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Edit Profile"
+                android:id="@+id/customerEditProfileButton"
+                android:layout_weight="0.01"
+                android:onClick="openCustomerEditProfileActivity" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

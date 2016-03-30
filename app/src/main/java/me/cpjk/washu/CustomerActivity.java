@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class CustomerActivity extends AppCompatActivity {
 
+    private final int EDIT_PROFILE_REQUEST_CODE = 100;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,4 +27,8 @@ public class CustomerActivity extends AppCompatActivity {
         CustomerActivity.this.startActivity(startCustomerCreateOrderActivityIntent);
     }
 
+    public void openCustomerEditProfileActivity(View view) {
+        Intent startCustomerEditProfileActivityIntent = new Intent(CustomerActivity.this, CustomerEditProfileActivity.class);
+        CustomerActivity.this.startActivityForResult(startCustomerEditProfileActivityIntent, EDIT_PROFILE_REQUEST_CODE);
+    }
 }
