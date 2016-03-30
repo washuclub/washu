@@ -30,6 +30,7 @@
                 android:ems="10"
                 android:id="@+id/profileNameInput"
                 android:layout_weight="1" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -85,7 +86,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Submit Changes"
-                android:id="@+id/profileSubmitChangesButton" />
+                android:id="@+id/profileSubmitChangesButton"
+                android:onClick="submitProfileChanges" />
         </LinearLayout>
 
     </LinearLayout>

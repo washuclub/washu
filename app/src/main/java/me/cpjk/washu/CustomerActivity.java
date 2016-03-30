@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class CustomerActivity extends AppCompatActivity {
 
@@ -20,6 +21,15 @@ public class CustomerActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Button customerOrdersButton = (Button) findViewById(R.id.customerCreateOrderButton);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == EDIT_PROFILE_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+
+                Toast.makeText(this, "Profile updated", Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     public void openCustomerCreateOrderActivity(View view) {
