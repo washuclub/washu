@@ -20,39 +20,55 @@
         android:layout_centerHorizontal="true"
         android:weightSum="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Enter Credit Card Information:"
-            android:id="@+id/creditCard"
-            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="59dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Enter Credit Card Information:"
+                android:id="@+id/creditCard"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:layout_gravity="center_horizontal">
+            android:layout_height="162dp"
+            android:weightSum="1">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/ccNumber"
-                android:text="CC number"
+                android:id="@+id/paymentCCNumberEditText"
                 android:layout_marginTop="75dp"
                 android:inputType="number" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Credit Card Number"
+                android:id="@+id/paymentCCNumberTextView" />
         </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Make Order"
-            android:id="@+id/orderButton"
-            android:layout_gravity="center_horizontal"
-            android:textSize="30sp"
-            android:layout_marginTop="100dp"
-            android:onClick="openOrderCompleteActivity" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="201dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Make Order"
+                android:id="@+id/orderButton"
+                android:layout_gravity="center_horizontal"
+                android:textSize="30sp"
+                android:layout_marginTop="100dp"
+                android:onClick="openOrderCompleteActivity" />
+        </LinearLayout>
 
     </LinearLayout>
 </RelativeLayout>

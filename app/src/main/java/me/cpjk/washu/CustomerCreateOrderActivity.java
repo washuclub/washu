@@ -1,6 +1,8 @@
 package me.cpjk.washu;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -11,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +39,12 @@ public class CustomerCreateOrderActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        SharedPreferences sharedPrefs = this.getSharedPreferences(getString(R.string.profile_file_name), Context.MODE_PRIVATE);
+        String licensePlateNumber = sharedPrefs.getString(this.getString(R.string.user_profile_license), "");
+
+        EditText licensePlateEditText = (EditText) findViewById(R.id.orderLicensePlateEditText);
+        licensePlateEditText.setText(licensePlateNumber);
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -75,6 +84,11 @@ public class CustomerCreateOrderActivity extends AppCompatActivity {
     public void startSelectWashTypeActivity(View view) {
         Intent startSelectWashTypeIntent = new Intent(CustomerCreateOrderActivity.this, SelectWashTypeActivity.class);
         CustomerCreateOrderActivity.this.startActivityForResult(startSelectWashTypeIntent, START_SELECT_WASH_TYPE_ACTIVITY_REQUEST_CODE);
+    }
+
+    public void openPaymentActivity(View view) {
+        Intent startPaymentActivityIntent = new Intent(CustomerCreateOrderActivity.this, PaymentActivity.class);
+        CustomerCreateOrderActivity.this.startActivity(startPaymentActivityIntent);
     }
 
     public void startCameraCapture(View view) {
@@ -125,9 +139,4 @@ public class CustomerCreateOrderActivity extends AppCompatActivity {
 
         return mediaFile;
     }
-    public void openPaymentActivity(View view) {
-        Intent startPaymentActivityIntent = new Intent(CustomerCreateOrderActivity.this, PaymentActivity.class);
-        CustomerCreateOrderActivity.this.startActivity(startPaymentActivityIntent);
-    }
-
 }
