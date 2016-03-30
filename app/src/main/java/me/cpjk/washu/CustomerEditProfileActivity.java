@@ -28,10 +28,10 @@ public class CustomerEditProfileActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         SharedPreferences sharedPrefs = this.getSharedPreferences(getString(R.string.profile_file_name), Context.MODE_PRIVATE);
-        name = sharedPrefs.getString(this.getString(R.string.user_profile_name), "First name");
-        age = sharedPrefs.getString(this.getString(R.string.user_profile_age), "Age");
-        ccNumber = sharedPrefs.getString(this.getString(R.string.user_profile_cc), "Credit card number");
-        licensePlateNumber = sharedPrefs.getString(this.getString(R.string.user_profile_license), "License plate number");
+        name = sharedPrefs.getString(this.getString(R.string.user_profile_name), "");
+        age = sharedPrefs.getString(this.getString(R.string.user_profile_age), "");
+        ccNumber = sharedPrefs.getString(this.getString(R.string.user_profile_cc), "");
+        licensePlateNumber = sharedPrefs.getString(this.getString(R.string.user_profile_license), "");
 
         EditText nameField = (EditText) findViewById(R.id.profileNameInput);
         EditText ageField = (EditText) findViewById(R.id.profileAgeInput);
