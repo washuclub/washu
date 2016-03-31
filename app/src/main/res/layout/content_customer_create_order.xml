@@ -96,13 +96,11 @@
             android:layout_weight="0.53">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
                 android:text="Next >"
                 android:id="@+id/nextButton"
-                android:layout_marginTop="110dp"
-                android:onClick="openPaymentActivity"
-                android:layout_marginLeft="135dp" />
+                android:onClick="openPaymentActivity" />
         </LinearLayout>
 
     </LinearLayout>

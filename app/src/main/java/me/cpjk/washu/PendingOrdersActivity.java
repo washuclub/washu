@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,9 +50,7 @@ public class PendingOrdersActivity extends AppCompatActivity {
             carImageView.setImageBitmap(scaledcarImageBitmap);
         }
         catch (Exception e) {
-            //Toast.makeText(this, "Could not find image file for display", Toast.LENGTH_LONG).show();
-            Log.d("DERP", e.toString() + " -> " + imageFileUri);
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Could not find image file for display", Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -60,18 +59,15 @@ public class PendingOrdersActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    public void removeOrder(View view) {
+        SharedPreferences sharedPrefs = this.getSharedPreferences("order1", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        editor.clear();
+        editor.commit();
+        finish();
+    }
+
     private Uri imageUri(String uriString) {
-        /*
-        String state = Environment.getExternalStorageState();
-        if (! Environment.MEDIA_MOUNTED.equals(state)) return null;
-
-        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), "Washu");
-        mediaStorageDir.
-
-        File imageFile = ;
-        Uri imageFileUri = Uri.fromFile(imageFile)
-        */
         return Uri.parse(uriString);
 
     }
